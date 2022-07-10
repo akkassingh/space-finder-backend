@@ -1,0 +1,143 @@
+{
+  "version": "20.0.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "space-finder.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "space-finder.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "space-finder": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "space-finder.template.json",
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/1e87034f8476c3076d8c9ae44ac3da1c34416d6ba12dffc186e7f8489eb5f2b4.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "space-finder.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-lookup-role-${AWS::AccountId}-${AWS::Region}",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        },
+        "stackName": "spaceFinder"
+      },
+      "dependencies": [
+        "space-finder.assets"
+      ],
+      "metadata": {
+        "/space-finder/spaceAPi/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "spaceAPi67CD7AB5"
+          }
+        ],
+        "/space-finder/spaceAPi/CloudWatchRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "spaceAPiCloudWatchRole174E924D"
+          }
+        ],
+        "/space-finder/spaceAPi/Account": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "spaceAPiAccount64B5A477"
+          }
+        ],
+        "/space-finder/spaceAPi/Deployment/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "spaceAPiDeployment324061F9b2367205f48325582043aae478b1c709"
+          }
+        ],
+        "/space-finder/spaceAPi/DeploymentStage.prod/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "spaceAPiDeploymentStageprodD4B5EE48"
+          }
+        ],
+        "/space-finder/spaceAPi/Endpoint": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "spaceAPiEndpoint3B1F7CB0"
+          }
+        ],
+        "/space-finder/spaceAPi/Default/hello/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "spaceAPihelloDE33AF28"
+          }
+        ],
+        "/space-finder/spaceAPi/Default/hello/GET/ApiPermission.spacefinderspaceAPi1F156A8D.GET..hello": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "spaceAPihelloGETApiPermissionspacefinderspaceAPi1F156A8DGEThello6695EDFA"
+          }
+        ],
+        "/space-finder/spaceAPi/Default/hello/GET/ApiPermission.Test.spacefinderspaceAPi1F156A8D.GET..hello": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "spaceAPihelloGETApiPermissionTestspacefinderspaceAPi1F156A8DGEThello71ACDA13"
+          }
+        ],
+        "/space-finder/spaceAPi/Default/hello/GET/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "spaceAPihelloGET8F3FC28C"
+          }
+        ],
+        "/space-finder/helloLambda/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "helloLambdaServiceRoleBB046714"
+          }
+        ],
+        "/space-finder/helloLambda/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "helloLambda79DCE371"
+          }
+        ],
+        "/space-finder/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/space-finder/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/space-finder/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/space-finder/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "space-finder"
+    }
+  }
+}
