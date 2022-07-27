@@ -2,6 +2,9 @@
 GET {{endpoint}}/hello
 ###
 
+GET {{endpoint}}/spaces?spaceId=6ddae0a5-bda4-485b-86bb-5a8aec5cf3d2
+###
+
 POST {{endpoint}}/spaces/
 Content-Type: application/json
 
