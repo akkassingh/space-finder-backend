@@ -1,27 +1,27 @@
 @endpoint = https://ntpkcrvuhf.execute-api.us-east-1.amazonaws.com/prod
-GET {{endpoint}}/hello
+
+GET {{endpoint}}/spaces/
 ###
 
-GET {{endpoint}}/spaces
-###
-
-GET {{endpoint}}/spaces?spaceId=6ddae0a5-bda4-485b-86bb-5a8aec5cf3d2
-###
-
-PUT {{endpoint}}/spaces?spaceId=6ddae0a5-bda4-485b-86bb-5a8aec5cf3d2
-Content-Type: application/json
-{
-    "location": "London Is now LONDON",
-}
-###
-
-GET {{endpoint}}/spaces?location=london
+GET {{endpoint}}/spaces?spaceId=9ec90b8a-3638-45a8-925c-7d4fb5c3ca27
 ###
 
 POST {{endpoint}}/spaces/
 Content-Type: application/json
+
 {
-    "location": "London",
-    "name": "Best Location"
+    "location": "Argentina",
+    "name": "Best location"
 }
+###
+
+PUT {{endpoint}}/spaces?spaceId=9ec90b8a-3638-45a8-925c-7d4fb5c3ca27
+Content-Type: application/json
+
+{
+    "location": "Argentina"
+}
+###
+
+DELETE  {{endpoint}}/spaces?spaceId=9ec90b8a-3638-45a8-925c-7d4fb5c3ca27
 ###
