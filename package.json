@@ -22,7 +22,6 @@
     "@types/webpack": "^5.28.0",
     "aws-cdk": "^2.31.1",
     "aws-cdk-lib": "^2.31.1",
-    "aws-sdk": "^2.1181.0",
     "constructs": "^10.1.43",
     "esbuild": "^0.14.49",
     "ts-loader": "^9.3.1",
@@ -32,8 +31,7 @@
     "webpack-cli": "^4.10.0"
   },
   "dependencies": {
-    "@types/uuid": "^8.3.4",
-    "uuid": "^8.3.2",
-    "@types/aws-lambda": "^8.10.76"
+    "@types/aws-lambda": "^8.10.76",
+    "aws-sdk": "^2.1181.0"
   }
 }
