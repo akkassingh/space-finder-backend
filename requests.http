@@ -2,12 +2,24 @@
 GET {{endpoint}}/hello
 ###
 
+GET {{endpoint}}/spaces
+###
+
 GET {{endpoint}}/spaces?spaceId=6ddae0a5-bda4-485b-86bb-5a8aec5cf3d2
+###
+
+PUT {{endpoint}}/spaces?spaceId=6ddae0a5-bda4-485b-86bb-5a8aec5cf3d2
+Content-Type: application/json
+{
+    "location": "London Is now LONDON",
+}
+###
+
+GET {{endpoint}}/spaces?location=london
 ###
 
 POST {{endpoint}}/spaces/
 Content-Type: application/json
-
 {
     "location": "London",
     "name": "Best Location"
