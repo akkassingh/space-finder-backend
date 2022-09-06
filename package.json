@@ -31,7 +31,9 @@
     "webpack-cli": "^4.10.0"
   },
   "dependencies": {
+    "@aws-amplify/auth": "^4.6.1",
     "@types/aws-lambda": "^8.10.76",
+    "aws-amplify": "^4.3.30",
     "aws-sdk": "^2.1181.0"
   }
 }
